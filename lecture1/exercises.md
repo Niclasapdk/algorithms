@@ -155,3 +155,14 @@ So algorithm $A$ is faster for $n\le43$ and algorithm $B$ is faster for $n\ge44$
 c. For each function $f(n)$ and time $t$ in the following table, determine the largest size $n$ of a
 problem that can be solved in time $t$, assuming that the algorithm to solve the problem
 takes $f(n)$ microseconds.
+
+|$f(n)$         |1 second       |1 minute           |1 hour              |1 day                |1 month                |1 year                |1 decade               |
+|---------------|---------------|-------------------|--------------------|---------------------|-----------------------|----------------------|-----------------------|
+|$\log(n)$      |$e^{10^6}$     |$e^{60 \cdot 10^6}$|$e^{3.6 \cdot 10^9}$|$e^{86.4 \cdot 10^9}$|$e^{2.6 \cdot 10^{12}}$|$e^{31 \cdot 10^{12}}$|$e^{3.1 \cdot 10^{15}}$|
+|$\sqrt{n}$     |$10^{12}$      |$3.6 \cdot 10^{15}$|$13 \cdot 10^{18}$  |$7.5 \cdot 10^{21}$  |$6.8 \cdot 10^{24}$    |$961 \cdot 10^{24}$   |$9.61 \cdot 10^{30}$   |
+|$n$            |$10^6$         |$60 \cdot 10^6$    |$3.6 \cdot 10^9$    |$86.4 \cdot 10^9$    |$2.6 \cdot 10^{12}$    |$31 \cdot 10^{12}$    |$3.1 \cdot 10^{15}$    |
+|$n\cdot\log(n)$|$88 \cdot 10^3$|$4 \cdot 10^6$     |$190 \cdot 10^6$    |$3.9 \cdot 10^9$     |$103 \cdot 10^9$       |$1.12 \cdot 10^{12}$  |$96.3 \cdot 10^{12}$   |
+|$n^2$          |$10^3$         |$7.7 \cdot 10^3$   |$60 \cdot 10^3$     |$294 \cdot 10^3$     |$1.6 \cdot 10^6$       |$5.57 \cdot 10^6$     |$9.8 \cdot 10^6$       |
+|$n^3$          |$100$          |$391$              |$1.5 \cdot 10^3$    |$4.4 \cdot 10^3$     |$14 \cdot 10^3$        |$31 \cdot 10^3$       |$146 \cdot 10^3$       |
+|$2^n$          |$19$           |$25$               |$31$                |$36$                 |$41$                   |$44$                  |$51$                   |
+|$n!$           |$9$            |$11$               |$12$                |$13$                 |$15$                   |$16$                  |$17$                   |
