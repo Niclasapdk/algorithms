@@ -50,8 +50,8 @@ Valid search problem.
 ii. sequence ⟨−2, 800, 10, 90, 14⟩, and an integer, ⟨100⟩
 Same as question a.i.
 
-iii. sequence ⟨5, `aa` 4, 9, 15⟩, and an integer, ⟨`aa`
-`aa` is found in the array, so precondition $P_1$ is met.
+iii. sequence ⟨5, `a` 4, 9, 15⟩, and an integer, ⟨`a`⟩.
+`a` is found in the array, so precondition $P_1$ is met.
 Output should follow postcondition $Q_2$.
 Valid search problem.
 
