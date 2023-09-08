@@ -21,6 +21,17 @@ our answer: Natural disasters, such as hurricanes, earthquakes and wildfires are
 Which characteristics of an algorithm (see slide 4) do the procedures a - d below have and which
 do they lack?
 
+![image](exc2_algorithms.png)
+
+algorithm A
+
+
+algorithm B
+
+algorithm C
+
+algorithm D
+
 ## Exercise 3 - Algorithm Problem Specification:
 a. Which of the following are valid instances of the search problem?
 
