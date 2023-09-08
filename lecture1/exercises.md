@@ -138,8 +138,57 @@ Combination of searching and sorting algorithms.
 iii. **E-commerce recommendations**: Analyze user preferences and behaviors to
 suggest relevant products.
 
+Preconditions:
+- The e-commerce platform has access to data on user preferences and behaviors, which may include past purchase history, browsing history, product views, and user demographics.
+- There is a catalog of available products on the platform, each with associated attributes and categories.
+- Users are logged in or identifiable to associate their preferences and behaviors with their accounts.
+- The platform has a mechanism to track and record user interactions with products.
+
+Postconditions:
+- A list of relevant product recommendations is generated for each user.
+- The recommendations are based on the user's preferences and behaviors.
+- The recommended products are currently available and in stock.
+- The recommendation list is presented to the user through the e-commerce platform.
+- The user can interact with the recommended products (e.g., view details, add to cart, or purchase).
+
+Constraints:
+- Recommendations should align with the user's preferences and behaviors, considering factors such as purchase history, browsing history, and user demographics.
+- Recommended products should be currently available in the catalog and in stock.
+- The recommendation algorithm should be computationally efficient, as recommendations are typically generated in real-time or near-real-time.
+- Recommendations may vary in type, such as personalized product suggestions, related products, or trending items.
+- Users may have privacy preferences that limit the use of their data for recommendation purposes.
+- Recommendations should not overwhelm the user with too many options but should provide a reasonable number of relevant choices.
+
+Solutions:
+Searching algorithm.
+
 iv. **Data compression**: compress data to reduce file sizes while preserving essential
 information.
+
+Preconditions:
+- There is a set of data or files that need to be compressed.
+- The data may include various types such as text, images, audio, or video.
+- A compression algorithm or method is available for use.
+- The compression algorithm may have parameters or settings that can be adjusted.
+- The original data is stored or transmitted in an uncompressed form.
+
+Postconditions:
+- The compressed data or files are generated, resulting in reduced file sizes.
+- The essential information in the original data is preserved to a certain extent.
+- The compressed data can be decompressed to recover the original data.
+- The compression ratio (original size to compressed size) is measured and optimized.
+- The compressed data can be stored, transmitted, or used in a way that reduces storage or bandwidth requirements.
+
+Constraints:
+- Compression should not result in a loss of essential information beyond an acceptable threshold.
+- The compression algorithm should be efficient, with consideration for time complexity and computational resources.
+- Compression and decompression should be reversible, ensuring the ability to recover the original data accurately.
+- Different types of data (text, images, audio, video) may require different compression techniques or algorithms.
+- There may be a trade-off between compression ratio and compression speed.
+- Compatibility with common compression standards or formats may be necessary for interoperability.
+
+Solutions:
+Sorting algorithms and the compress.
 
 ## Exercise 4 - Algorithmic Efficiency
 
