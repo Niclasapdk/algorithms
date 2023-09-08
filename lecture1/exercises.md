@@ -95,6 +95,41 @@ Constraints:
 ii. **Scheduling of online food delivery orders**: Schedule all received orders in a
 way that minimizes the total delivery time.
 
+Precondition:
+
+- The system has received a set of online food delivery orders, each with specific delivery locations and time windows.
+
+- There is a fleet of delivery vehicles available.
+
+- Each delivery vehicle has a known start location.
+
+- The system has access to real-time traffic information or estimates for delivery times between locations.
+
+- The orders have valid delivery time windows within which they must be delivered.
+
+- Delivery vehicles have a maximum capacity for orders.
+
+- Orders cannot be split once they are assigned to a vehicle.
+
+Postcondition:
+
+- All received orders have been scheduled for delivery.
+- The total delivery time is minimized, which means that all orders are delivered within their respective time windows as early as possible.
+- The assigned orders for each vehicle do not exceed its maximum capacity.
+- The routes for each vehicle have been determined, specifying the order in which the orders are to be delivered.
+- The start and end times for each delivery route are computed.
+
+Constraints:
+- The total number of orders and the capacity of delivery vehicles should not violate the maximum capacity of the vehicles.
+- Orders must be delivered within their specified time windows.
+- Each order can only be assigned to one delivery vehicle.
+- Vehicles cannot simultaneously serve multiple orders that conflict in time windows.
+- The scheduling algorithm should consider real-time traffic conditions and dynamically adjust routes if necessary.
+- The objective is to minimize the total delivery time.
+
+Solution:
+Combination of searching and sorting algorithms.
+
 iii. **E-commerce recommendations**: Analyze user preferences and behaviors to
 suggest relevant products.
 
