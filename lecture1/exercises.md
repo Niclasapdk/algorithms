@@ -5,9 +5,16 @@
 a. Select and discuss a real-world problem in which only the best solution will do. Then
 come up with one in which approximately the best solution is good enough.
 
+Our answer: Autonomous vehicle safety 
+In the context of autonomous vehicles, only the best solution will suffice in a complex and dynamic environment, where the margin of error is extremely low. 
+
+GPS is a real world problem where it is not required to always be the best route that the algorithm comes up with, it just has to be good enough that you can get to your location in a reasonable time span. 
+
 b. Describe a real-world problem in which sometimes the entire input is available before
 you need to solve the problem, but other times the input is not entirely available in
 advance and arrives over time.
+
+our answer: Natural disasters, such as hurricanes, earthquakes and wildfires are real-world problems that sometimes involve varying degress of input availability. The nature of these disasters means that the entire input is not always available in advance.
 
 ## Exercise 2 - Algorithm Characteristics/Requirements
 
