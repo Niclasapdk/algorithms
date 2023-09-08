@@ -43,22 +43,27 @@ So it has a finite number of steps is precisely defined and is correct, adaptabl
 a. Which of the following are valid instances of the search problem?
 
 i. sequence ⟨2, 8, 10, 9, 15, 20, 14⟩, and an integer, ⟨−20⟩
+
 -20 is not found in the array so precondition $P_1$ (slide 13) is not met, however, precondition $P_2$ is met.
 A `notFoundException` should be thrown.
 Valid search problem.
 
 ii. sequence ⟨−2, 800, 10, 90, 14⟩, and an integer, ⟨100⟩
+
 Same as question a.i.
 
 iii. sequence ⟨5, `a` 4, 9, 15⟩, and an integer, ⟨`a`⟩.
+
 `a` is found in the array, so precondition $P_1$ is met.
 Output should follow postcondition $Q_2$.
 Valid search problem.
 
 iv. sequence ⟨5, 98, 4, 9, 15⟩
+
 There is no $v$ given, so this is not a valid search problem.
 
 v. sequence ⟨⟩ and integer, ⟨5⟩
+
 Length of the array is not a positive integer, so this is not a valid search problem.
 
 b. Consider the problem of adding two n-bit binary integers, stored in two n-element arrays
