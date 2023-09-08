@@ -24,13 +24,20 @@ do they lack?
 ![image](exc2_algorithms.png)
 
 algorithm A
-
+For this algorithm to run n has to be bigger than 0
+This algorithm will never stop once it starts as it has no break condition. 
+The algorithm is correct in terms of producing the correct output for the individual inputs.
 
 algorithm B
+This algorithm has a break condition in terms that it is solvable before we grow too old. 
+The steps are also defined precisely 
 
 algorithm C
+This algorithm doesn't work has it will never enter the while loop because i is not defined in the function.
 
 algorithm D
+This algortihm is a random choice algorithm who chooses either a or b given in the function and returns the choosen as x in the function. 
+So it has a finite number of steps is precisely defined and is correct, adaptable, robust and maintanable overall a good algorithm for it's purpose.
 
 ## Exercise 3 - Algorithm Problem Specification:
 a. Which of the following are valid instances of the search problem?
