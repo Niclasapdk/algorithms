@@ -1,4 +1,4 @@
-# Algorithms 1 - exercises
+# Algorithms 0 - exercises
 
 ## Exercise 1 - Algorithmic Problems
 
