@@ -191,8 +191,10 @@ def strassen_multiply(A, B):
 ```
 
 ### Exercise 2
-- a. Generalize the MATRIX-MULTIPLY-RECURSIVE algorithm to multiply $n \times n$ matrices in which n is not necessarily an exact power of 2.  
+- a. Generalize the MATRIX-MULTIPLY-RECURSIVE algorithm to multiply $n \times n$ matrices in which n is not necessarily an exact power of 2.
 
+Løsning: 
+By letting $m = 2^{⌈lg(n)⌉}$ and augmenting the $n × n$ matrix with zeros in the additional $(m−n)$ rows  and  columns,  we  can  effortlessly  apply  our  original  recursive  algorithm  to  the  new $m × m$ matrix where m is an exact power of 2:
 
 - b. Give a recurrence describing its running time.  
 
