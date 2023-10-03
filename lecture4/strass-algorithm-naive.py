@@ -21,8 +21,8 @@ def strassen(A, B):
     else:
         raise ValueError("Wallah matricen er ikke 2x2")
     
-A = [[2,2], [2,2]]
-B = [[3,3], [3,3]]
+A = [[1,2], [3,4]]
+B = [[5,6], [7,8]]
 
 result = strassen(A, B)
 for row in result:
