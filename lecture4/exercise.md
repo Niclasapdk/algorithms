@@ -99,6 +99,50 @@ Same amount of multiplication and addition as answer for **i.**
 Write the pseudocode for Strassen’s algorithm. 
 
 **Answer:**
+```
+n=A.rows
+let C be  a  new n×n matrix 
+if n==1
+	c11​=a11​⋅b11​
+else  partition A,B, and C
+	let S1,​S2,​…, and S10​ be 10 new n/2×n/2 matrices
+	let P1,​P2,​…, and P7​ be 7 new n/2×n/2 matrices
+
+//  calculate  the  sum  matrices 
+
+	S1​=B12​−B22​
+	S2​=A11​+A12​
+	S3​=A21​+A22​
+	S4​=B21​−B11​
+	S5​=A11​+A22​
+	S6​=B11​+B22​
+	S7​=A12​−A22​
+	S8​=B21​+B22
+​	S9​=A11​−A21​
+	S10​=B11​+B12
+
+​//  calculate  the  product  matrices 
+	P1=Square-Matrix-Multiply-Strassen(A11,​S1)​
+	P2=Square-Matrix-Multiply-Strassen(S2,​B22)
+​	P3=Square-Matrix-Multiply-Strassen(S3,​B11)
+​	P4=Square-Matrix-Multiply-Strassen(A22,​S4)
+​	P5=Square-Matrix-Multiply-Strassen(S5,​S6)​
+	P6=Square-Matrix-Multiply-Strassen(S7,​S8)
+​	P7=Square-Matrix-Multiply-Strassen(S9,​S10)
+
+​//  calculate  the  final  product  sub  matrices 
+	C11​=P4​+P5​+P6​−P2​
+	C12​=P1​+P2​
+	C21​=P3​+P4​
+	C22​=P1​+P5​−P3​−P7
+
+return C​
+```
+
+- c.
+Implement Strassen’s algorithm in any programming language of your choice. Test your implementation with the manually obtained results above.
+
+**Answer:**
 ```python
 import numpy as np  # You can use NumPy for matrix operations
 
@@ -145,11 +189,6 @@ def strassen_multiply(A, B):
 
     return C
 ```
-
-- c.
-Implement Strassen’s algorithm in any programming language of your choice. Test your implementation with the manually obtained results above.
-
-**No thank you**
 
 ### Exercise 2
 - a. Generalize the MATRIX-MULTIPLY-RECURSIVE algorithm to multiply $n \times n$ matrices in which n is not necessarily an exact power of 2.  
