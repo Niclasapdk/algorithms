@@ -128,14 +128,35 @@ Consider the problem of making change for n cents using the smallest number of c
 ### a. Greedy Algorithm
 Describe a greedy algorithm to make change consisting of quarters (25 cents), dimes (10 cents), nickels (5 cents), and pennies (1 cent). Prove that your algorithm yields an optimal solution.
 
+**Solution**
+I would describe the greedy algorithm as follows
+  - Start with the largest coin (Quarters)
+  - While the value of the coin is less than or equal to the remaining change, use as many of that coin as possible
+  - Move to the next smaller coin(Dimes) adn repeat step 2
+  - Continue this process with nickels and pennies until the entire change is made 
+
+The greedy algorithm with standard coin denominations is optimal as it always selects the largest coin that doesn't exceed the remaining amount, which ensures that it minimizes the number of coins used.
+
 ### b. Greedy Algorithm with Powers of c
 Suppose that the available coins are in denominations that are powers of c: the denominations are c^0, c^1, … , c^k for some integers c > 1 and k ≥ 1. Show that the greedy algorithm always yields an optimal solution.
+
+**Solution**
+The greedy algorithm must remian optimal as long as the coin denominations are powers of c(c^0, c^1 .. c^k) for some integers c > 1 and k >= 1. i guess?
 
 ### c. Non-Optimal Greedy Solution
 Give a set of coin denominations for which the greedy algorithm does not yield an optimal solution. Your set should include a penny so that there is a solution for every value of n.
 
+**Solution**
+to be solved
+
 ### d. Algorithm for Smallest Number of Coins
 Give an O(nk)-time algorithm that makes change for any set of k different coin denominations using the smallest number of coins, assuming that one of the coins is a penny.
 
+**Solution**
+to be solved
+
 ### e. Algorithm Implementation
 Implement the greedy algorithm in (a) and verify that it works.
+
+**Solution**
+to be solved
