@@ -196,9 +196,15 @@ def strassen_multiply(A, B):
 Løsning: 
 By letting $m = 2^{⌈lg(n)⌉}$ and augmenting the $n × n$ matrix with zeros in the additional $(m−n)$ rows  and  columns,  we  can  effortlessly  apply  our  original  recursive  algorithm  to  the  new $m × m$ matrix where m is an exact power of 2:
 
-- b. Give a recurrence describing its running time.  
+- b. Give a recurrence describing its running time. 
 
-- c. Argues that it has $\Theta(𝑛3)$ worst case time complexity.  
+Løsning:
+It is the same because it pads the uneven matrices so they still divide by 2 so you still get your base case of 2x2
+
+- c. Argues that it has $\Theta(𝑛^3)$ worst case time complexity.  
+
+Løsning:
+Because it's still the same recurrence it must have the same worst case time complexity still.
 
 - d. Implement the generalized MATRIX-MULTIPLY-RECURSIVE algorithm in a. Does your implementation work as expected?
 
