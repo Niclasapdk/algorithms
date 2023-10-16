@@ -10,7 +10,7 @@ The Fibonacci numbers are defined by recurrence:
 ### a. Linear-Time Dynamic Programming Algorithm
 Give a linear-time dynamic-programming algorithm to compute the nth Fibonacci number.
 
-Solution 1(Memoized)
+**Solution 1**(Memoized)
 ```
 function memoizedFib(n, memo={}){
     if (memo[n]){
@@ -24,7 +24,7 @@ function memoizedFib(n, memo={}){
     return result;
 }
 ```
-Solution 2(Bottom up)
+**Solution 2** (Bottom up)
 ```
 function tabulatedFib(n){  
     if (n === 1 || n === 2){
@@ -42,20 +42,22 @@ Both methods has a linear time compelxity of O(n)
 
 ### b. Subproblem Graph
 Draw the subproblem graph.
+
+**Solution**
 ![fibonacci sub problems](fib_subproblems.webp)
 Stolen from the internet
 
 ### c. Graph Statistics
 How many vertices and edges does the graph in (b) contain?
 
-Solution: 
+**Solution** 
 The graph is essentially a binary tree with $n + 1$ vertices(nodes).
 Each node(except the first two) has two edges, therefore the number of edges will be $2 * n$
 
 ### d. Algorithm Implementation
 Implement your algorithm in (a) and verify that it works.
 
-Solution (Bottom up in python)
+**Solution** (Bottom up in python)
 Chosen because i get recursion error with memoize method
 ```python
 def fibonacci(n):
@@ -83,11 +85,41 @@ Consider a modification of the rod-cutting problem where each cut incurs a fixed
 ### a. Dynamic Programming Algorithm
 Give a dynamic-programming algorithm to solve this modified problem.
 
+**Solution** (Implemented in python with Bottom up approach)
+```python
+def modified_rod_cutting(price, length, cost):
+    n = len(price) #length of price list to create array
+    revenue = [0] * (n + 1) #Creates array to store maximum revenues
+
+    for i in range(1, n + 1): #iterates through possible lengths of the rod
+        max_revenue = -float('inf') #keeps track of maximum revenue for current rod length i
+        for j in range(i): # iterates through the possible cuts for the rod length i
+            max_revenue = max(max_revenue, price[j] + revenue[i - j - 1] - (j + 1) * cost)# calculates the max revenue at the current cut + the remainign length i
+        revenue[i] = max_revenue #updtes max revenue array
+
+    return revenue[n]
+
+# Example usage:
+price = [1, 5, 8, 9, 10, 17, 17, 20]
+length = len(price)
+cost = 2
+result = modified_rod_cutting(price, length, cost)
+print(f"The maximum revenue is {result}")
+```
+The algorithm repeats these steps for each possible rod length, starting from shorter rods and building up to the desired rod length. Once the loop completes, the revenue array contains the maximum revenue for each rod length. Finally, the algorithm returns the maximum revenue for the specified rod length, which is revenue[n].
+
+
 ### b. Algorithm Verification
 Use the data provided in the table for the rod-cutting problem to verify that your algorithm works correctly.
 
+**Solution**
+The algorithm can be verified by running the above code and seeing that it spits out the correct cost compared to ramonis table i guess?
+
 ### c. Running Time Analysis
 Analyze the running time of your algorithm in (a).
+
+**Solution**
+The running time of the algorithm must be $O(n^2)$ because of the nested for loops?
 
 ## 3. Change-Making
 
