@@ -1,6 +1,6 @@
 # Algorithms 1 - exercises
 
-## Exercise 2 - insertion sort
+## Exercise 1 - insertion sort
 
 a. Consider the application of insertion sort on an integer array with n ($n \ge 4$) elements.
 Create at least 8 instances of this array (including the sorted and reverse sorted instances)
@@ -43,6 +43,43 @@ running times indicating the best and worst cases.
 | `[4, 3, 2, 1]` | 6           | 25           |
 | `[7, 8, 4, 0]` | 6           | 25           |
 | `[9, 2, 4, 1]` | 6           | 25           |
+
+b. Prove insertionsort pseudocode correctness
+
+```pseudocode
+function insertionSort(arr):
+    for i from 1 to length(arr):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j = j - 1
+        arr[j + 1] = key
+```
+
+Loop Invariant for the Outer Loop (for i from 1 to length(arr)):
+At the start of each iteration of the outer loop, the subarray arr[0..i-1] is sorted in non-decreasing order.
+
+Loop Invariant for the Inner Loop (while j >= 0 and arr[j] > key):
+At the start of each iteration of the inner loop, key holds the value that was originally at arr[i]. The elements arr[j+1], arr[j+2], ..., arr[i-1] are greater than key, and the elements arr[0], arr[1], ..., arr[j] are less than or equal to key.
+
+Now, let's prove these loop invariants:
+
+Initialization:
+
+    At the beginning of the algorithm, i is 1, and the subarray arr[0..i-1] contains only one element, which is trivially sorted.
+    The inner loop is not executed because j is initialized as i - 1, which is 0 in this case, and the condition j >= 0 is not met.
+
+Maintenance:
+
+    Assume that the loop invariants hold at the start of an iteration of the outer loop (for i from 1 to length(arr)).
+    In the inner loop, we move elements greater than key to the right (shifting them up one position) until we find the correct position for key. This preserves the sorted order of arr[0..i-1].
+    After the inner loop completes, arr[j+1] is set to key, which places key in the correct position in the sorted subarray.
+
+Termination:
+
+    When the outer loop completes (i.e., i becomes length(arr)), the subarray arr[0..i-1] is sorted in non-decreasing order, as per the loop invariant.
+    The entire array arr is now sorted because the outer loop has iterated through all elements.
 
 c. Implement the insertion sort algorithm and ensure to time its execution
 
